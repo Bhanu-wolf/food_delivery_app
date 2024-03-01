@@ -1,0 +1,58 @@
+import {StyleSheet} from 'react-native';
+
+export const styles = StyleSheet.create({
+  bottomSheetContainer: {
+    flex: 1,
+  },
+  bottomSheetContentContainer: {flex: 1, justifyContent: 'space-between'},
+  bottomSheetHeader: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    // borderWidth: 4,
+    height: 80,
+  },
+  bottomSheetTitle: {
+    fontSize: 25,
+    borderRadius: 10,
+    backgroundColor: 'grey',
+    elevation: 20,
+    height: 50,
+    width: '60%',
+    textAlign: 'center',
+    textAlignVertical: 'center',
+    marginTop: 3,
+    fontWeight: '700',
+    borderColor: 'white',
+    borderWidth: 1,
+    color: 'black',
+  },
+  bottomSheetCroseLogo: {
+    position: 'absolute',
+    right: 4,
+    top: 4,
+    borderRadius: 5,
+    backgroundColor: 'grey',
+    elevation: 10,
+    borderColor: 'white',
+    borderWidth: 1,
+  },
+  bottomSheetCloseButton: {
+    backgroundColor: 'grey',
+    height: 50,
+    borderWidth: 1,
+    width: 100,
+    borderRadius: 10,
+    elevation: 40,
+    borderColor: 'white',
+    alignSelf: 'center',
+    marginBottom: 20,
+  },
+  bottomSheetCloseButtonTitle: {
+    fontSize: 18,
+    color: 'black',
+    textAlign: 'center',
+    width: 100,
+    height: 50,
+    textAlignVertical: 'center',
+  },
+});
