@@ -64,8 +64,8 @@ const SignUpView: React.FC<TSignUpView> = ({
               setTouched,
             }) => (
               <View>
-                <View>
-                  <Text style={[styles.title]}>Sign Up</Text>
+                <View style={styles.titleContainer}>
+                  <Text style={styles.title}>Sign Up</Text>
                 </View>
                 <View style={styles.formColumnContainer}>
                   <AntDesign
@@ -76,6 +76,8 @@ const SignUpView: React.FC<TSignUpView> = ({
                   />
                   <TextInput
                     value={values.name}
+                    autoCapitalize="none"
+                    placeholderTextColor={'black'}
                     onChangeText={handleChange('name')}
                     placeholder="Full Name"
                     style={styles.inputText}
@@ -106,7 +108,9 @@ const SignUpView: React.FC<TSignUpView> = ({
                     style={styles.formLogo}
                   />
                   <TextInput
+                    autoCapitalize="none"
                     value={values.email}
+                    placeholderTextColor={'black'}
                     onChangeText={handleChange('email')}
                     placeholder="Email"
                     style={styles.inputText}
@@ -137,7 +141,9 @@ const SignUpView: React.FC<TSignUpView> = ({
                     style={[styles.formLogo]}
                   />
                   <TextInput
+                    autoCapitalize="none"
                     value={values.password}
+                    placeholderTextColor={'black'}
                     onChangeText={handleChange('password')}
                     placeholder="Password"
                     style={styles.inputText}
@@ -165,7 +171,8 @@ const SignUpView: React.FC<TSignUpView> = ({
                     onPress={() => {
                       setShowPassword(!showPassword);
                     }}
-                    size={25}
+                    size={22}
+                    color={'black'}
                     style={[styles.formLogo, {position: 'absolute', right: 20}]}
                   />
                 </View>
@@ -181,7 +188,9 @@ const SignUpView: React.FC<TSignUpView> = ({
                     style={[styles.formLogo]}
                   />
                   <TextInput
+                    autoCapitalize="none"
                     value={values.confPassword}
+                    placeholderTextColor={'black'}
                     onChangeText={handleChange('confPassword')}
                     placeholder="Confirm Password"
                     style={styles.inputText}
@@ -210,7 +219,8 @@ const SignUpView: React.FC<TSignUpView> = ({
                     onPress={() => {
                       setShowConfPassword(!showConfPassword);
                     }}
-                    size={25}
+                    color={'black'}
+                    size={22}
                     style={[styles.formLogo, {position: 'absolute', right: 20}]}
                   />
                 </View>
@@ -229,7 +239,7 @@ const SignUpView: React.FC<TSignUpView> = ({
           </Formik>
           <View style={styles.bottomInfoContainer}>
             <Text style={styles.oR}>OR</Text>
-            <Text style={styles.signInWith}>Sign Up With</Text>
+            <Text style={styles.signUpWith}>Sign Up With</Text>
           </View>
           <View style={styles.socialMedia}>
             <TouchableOpacity>
@@ -240,14 +250,14 @@ const SignUpView: React.FC<TSignUpView> = ({
                 style={styles.icon}
               />
             </TouchableOpacity>
-            <TouchableOpacity>
+            {/* <TouchableOpacity>
               <AntDesign
                 name="instagram"
                 size={30}
                 color="#FA7E1E"
                 style={styles.icon}
               />
-            </TouchableOpacity>
+            </TouchableOpacity> */}
             <TouchableOpacity>
               <AntDesign
                 name="facebook-square"

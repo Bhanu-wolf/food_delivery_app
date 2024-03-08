@@ -64,10 +64,10 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
   },
   inputText: {
-    fontSize: 18,
+    fontSize: 16,
     marginLeft: 15,
     width: '80%',
-    // borderWidth: 3,
+    color: 'black',
   },
   formLogo: {marginLeft: 3},
   errorMessage: {color: 'red', fontSize: 15, fontWeight: '700'},

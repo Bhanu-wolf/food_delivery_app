@@ -1,42 +1,3 @@
-// import {View, Text, TextInput, Button} from 'react-native';
-// import React, {useEffect} from 'react';
-// import {TProfileView} from './type';
-// import {styles} from './style';
-
-// // const ProfieView: React.FC<TProfileView> = ({route, navigation}) => {
-// //   //   useEffect(() => {
-// //   //     console.log('---->Profile ' + route.params.name);
-// //   //   }, []);
-// //   return (
-// //     <View>
-// //       <Text>ProfieView</Text>
-// //     </View>
-// //   );
-// // };
-
-// // export default ProfieView;
-
-// const ProfileView: React.FC<TProfileView> = ({route, navigation}) => {
-//   return (
-//     <View style={styles.container}>
-//       <Text style={styles.title}>PROFILE</Text>
-//       <View style={styles.inputContainer}>
-//         <Text style={styles.label}>Username</Text>
-//         <TextInput style={styles.input} />
-//       </View>
-//       <View style={styles.inputContainer}>
-//         <Text style={styles.label}>Email</Text>
-//         <TextInput style={styles.input} />
-//       </View>
-//       <Button title="SAVE" color="#007AFF" />
-//     </View>
-//   );
-// };
-
-// export default ProfileView;
-
-/* eslint-disable @typescript-eslint/no-unused-vars */
-/* eslint-disable react-native/no-inline-styles */
 import {
   View,
   Text,
@@ -69,7 +30,6 @@ const ProfileView: React.FC<TProfileView> = ({
   const getUserDataFunction = async () => {
     const data = await getActiveUserData();
     if (data) {
-      console.log('data----->' + data.name + data.email);
       setUserName(data.name);
       setUserEmail(data.email);
     }

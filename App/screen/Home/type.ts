@@ -3,4 +3,5 @@ export type THomeContainer = {
 };
 export type THomeView = {
   navigation: any;
+  onBackPress: () => boolean;
 };

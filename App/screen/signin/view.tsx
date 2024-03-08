@@ -53,7 +53,7 @@ const LogInView: React.FC<TLogInView> = ({
               setTouched,
             }) => (
               <View>
-                <View>
+                <View style={styles.titleContainer}>
                   <Text style={[styles.title]}>Sign In</Text>
                 </View>
                 <View style={styles.formColumnContainer}>
@@ -64,9 +64,11 @@ const LogInView: React.FC<TLogInView> = ({
                     style={styles.formLogo}
                   />
                   <TextInput
+                    autoCapitalize="none"
                     value={values.email}
                     onChangeText={handleChange('email')}
                     placeholder="Email"
+                    placeholderTextColor={'black'}
                     style={styles.inputText}
                     onFocus={() => {
                       setEmailFocus(true);
@@ -95,7 +97,9 @@ const LogInView: React.FC<TLogInView> = ({
                     style={[styles.formLogo]}
                   />
                   <TextInput
+                    autoCapitalize="none"
                     value={values.password}
+                    placeholderTextColor={'black'}
                     onBlur={() => {
                       handleBlur('password');
                       setPasswordFocus(false);
@@ -121,7 +125,8 @@ const LogInView: React.FC<TLogInView> = ({
                     onPress={() => {
                       setShowPassword(!showPassword);
                     }}
-                    size={25}
+                    color={'black'}
+                    size={22}
                     style={[styles.formLogo, {position: 'absolute', right: 20}]}
                   />
                 </View>
@@ -150,14 +155,6 @@ const LogInView: React.FC<TLogInView> = ({
                 name="google"
                 size={30}
                 color="#DB4437"
-                style={styles.icon}
-              />
-            </TouchableOpacity>
-            <TouchableOpacity>
-              <AntDesign
-                name="instagram"
-                size={30}
-                color="#FA7E1E"
                 style={styles.icon}
               />
             </TouchableOpacity>

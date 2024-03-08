@@ -34,7 +34,6 @@ const LogInContainer: React.FC<TLogInContainer> = ({navigation}) => {
       const jsonValue = await AsyncStorage.getItem(`${userInfo.email}`);
       if (jsonValue) {
         jsonData = JSON.parse(jsonValue);
-        console.log(jsonValue);
 
         if (
           jsonData.email === userInfo.email &&

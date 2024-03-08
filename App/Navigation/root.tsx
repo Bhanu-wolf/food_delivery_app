@@ -13,9 +13,6 @@ const RootNavigator: React.FC = () => {
     try {
       const value = await AsyncStorage.getItem('isLoggedIn');
       if (value) {
-        console.log('login value---------------->', isLogin);
-        console.log('login down value ------------>', value);
-
         setIsLogin(value);
       }
     } catch (e) {}

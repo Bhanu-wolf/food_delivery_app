@@ -1,28 +1,35 @@
-import {StyleSheet} from 'react-native';
+import {StyleSheet, Dimensions} from 'react-native';
 
+const Height = Dimensions.get('window').height;
 export const styles = StyleSheet.create({
   outerContainer: {
     flex: 1,
-    backgroundColor: 'white',
-    justifyContent: 'center',
+    backgroundColor: '#FFF0E6',
+    justifyContent: 'space-around',
     alignItems: 'center',
+    // borderWidth: 5,
+    borderColor: 'green',
+    paddingVertical: Height / 10,
   },
   formContainer: {
-    width: 380,
-
+    width: '100%',
+    // borderWidth: 3,
     flex: 1,
     justifyContent: 'center',
-    marginTop: 40,
+    marginVertical: 10,
+  },
+  titleContainer: {
+    marginVertical: 20,
   },
   title: {
     color: 'red',
     fontSize: 30,
     marginTop: 1,
-    fontWeight: '600',
+    fontWeight: '800',
     textAlign: 'center',
   },
   formColumnContainer: {
-    width: '85%',
+    width: '90%',
     marginVertical: 15,
     marginHorizontal: 10,
     borderRadius: 10,
@@ -36,13 +43,14 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
   },
   inputText: {
-    fontSize: 18,
+    fontSize: 16,
     marginLeft: 15,
     width: '85%',
-    // borderWidth: 3,
+    color: 'black',
+    height: 50,
   },
   formLogo: {marginLeft: 3},
-  errorMessage: {color: 'red', fontSize: 15, fontWeight: '700'},
+  errorMessage: {color: 'red', fontSize: 15, fontWeight: '400', marginLeft: 15},
   bottomSheetMessage: {fontSize: 20, color: 'black', textAlign: 'center'},
   buttonStyle: {
     backgroundColor: '#EA4335',
@@ -51,8 +59,8 @@ export const styles = StyleSheet.create({
     paddingHorizontal: 10,
     alignItems: 'center',
     justifyContent: 'center',
-    width: '83%',
-    marginTop: 4,
+    width: '80%',
+    marginTop: 20,
     alignSelf: 'center',
     elevation: 20,
     height: 50,
@@ -72,25 +80,26 @@ export const styles = StyleSheet.create({
   },
   forgotPassword: {
     fontSize: 17,
-    color: 'grey',
+    color: 'black',
     marginVertical: 3,
   },
   oR: {
     color: 'red',
-    fontSize: 19,
+    fontSize: 16,
     fontWeight: 'bold',
     marginVertical: 3,
   },
   signInWith: {
-    fontSize: 22,
+    fontSize: 18,
     marginVertical: 3,
     fontWeight: '400',
+    color: 'black',
   },
   socialMedia: {
     flex: 1,
     flexDirection: 'row',
     marginTop: 10,
-    justifyContent: 'space-around',
+    justifyContent: 'center',
   },
   icon: {
     height: 50,

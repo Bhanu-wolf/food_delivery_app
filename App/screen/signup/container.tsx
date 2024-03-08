@@ -39,7 +39,7 @@ const SignUpContainer: React.FC<TSignUpContainer> = ({navigation}) => {
         title: 'Success',
         textBody: 'Congrats Sign Up Successfully',
         button: 'close',
-        onHide: () => navigation.navigate('SignInScreen'),
+        onHide: () => navigation.replace('SignInScreen'),
       });
     } catch (error) {
       console.log('error');
